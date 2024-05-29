@@ -1,0 +1,24 @@
+﻿@model KeywordRequest
+<div class="card-header bg-secondary bg-gradient ml-0 py-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="text-white py-2">Search By Keyword</h2>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 offset-md-4 mt-5  border-success pt-3">
+    <form class="form-inline example" asp-action="Index" method="post">
+        <label class="sr-only" asp-for="Keyword">Keyword</label>
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-search" style="font-size:23px"></i></div>
+            </div>
+            <input type="text" class="form-control" asp-for="Keyword" placeholder="Search Keyword" />
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Search</button>
+        <span asp-validation-for="Keyword" class="text-danger"></span>
+
+    </form>
+
+
+</div>
